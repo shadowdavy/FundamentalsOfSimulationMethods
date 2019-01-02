@@ -15,10 +15,10 @@ typedef struct {
     double acc[3];
 } object;
 
-void calcAcc(object* o) {
-    double g;
-    for(int i = 0; i < 2; i++) {
-        o[i].vel_old[0] = o[i].vel[0];
+void calcAcc(object* o, int nbody) {
+    double g, temp_vel1, temp_vel2;
+    for(int i = 0; i < nbody; i++) {
+        /*o[i].vel_old[0] = o[i].vel[0];
         o[i].vel_old[1] = o[i].vel[1];
         o[i].vel_old[2] = o[i].vel[2];
         o[i + 1].vel_old[0] = o[i + 1].vel[0];
@@ -40,7 +40,13 @@ void calcAcc(object* o) {
 
         o[i + 1].pos[0] = o[i + 1].vel_old[0];
         o[i + 1].pos[1] = o[i + 1].vel_old[1];
-        o[i + 1].pos[2] = o[i + 1].vel_old[2];
+        o[i + 1].pos[2] = o[i + 1].vel_old[2];*/
+
+        for(int j = 0; j < 2; j++) {
+            if(i == j) continue;
+            temp_vel1 = o[i].vel[j]
+            temp_vel2 = o[i + 1].vel[j]
+        }
     }
 }
 
