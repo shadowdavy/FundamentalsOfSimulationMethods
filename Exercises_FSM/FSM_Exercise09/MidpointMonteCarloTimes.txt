@@ -1,0 +1,21 @@
+Midpoint: 	    d = 1, value: 1,	     time taken: 9e-05 s
+Monte Carlo: 	d = 1, value: 0.667782,	 time taken: 0.192902 s
+Midpoint: 	    d = 2, value: 0.986111,	 time taken: 1.2e-05 s
+Monte Carlo: 	d = 2, value: 0.667522,	 time taken: 0.377746 s
+Midpoint: 	    d = 3, value: 0.953704,	 time taken: 9e-06 s
+Monte Carlo: 	d = 3, value: 0.666749,	 time taken: 0.564666 s
+Midpoint: 	    d = 4, value: 0.902778,	 time taken: 1e-05 s
+Monte Carlo: 	d = 4, value: 0.667309,	 time taken: 0.752666 s
+Midpoint: 	    d = 5, value: 0.833333,	 time taken: 1.2e-05 s
+Monte Carlo: 	d = 5, value: 0.66848,	 time taken: 0.939342 s
+Midpoint: 	    d = 6, value: 0.74537,	 time taken: 1.1e-05 s
+Monte Carlo: 	d = 6, value: 0.667247,	 time taken: 1.12822 s
+Midpoint: 	    d = 7, value: 0.638889,	 time taken: 1.2e-05 s
+Monte Carlo: 	d = 7, value: 0.665838,	 time taken: 1.31527 s
+Midpoint: 	    d = 8, value: 0.684028,	 time taken: 1.3e-05 s
+Monte Carlo: 	d = 8, value: 0.666349,	 time taken: 1.50339 s
+Midpoint: 	    d = 9, value: 0.719136,	 time taken: 1.3e-05 s
+Monte Carlo: 	d = 9, value: 0.666807,	 time taken: 1.69148 s
+Midpoint: 	    d = 10, value: 0.747222, time taken: 1.3e-05 s
+Monte Carlo: 	d = 10, value: 0.665723, time taken: 1.87891 s
+

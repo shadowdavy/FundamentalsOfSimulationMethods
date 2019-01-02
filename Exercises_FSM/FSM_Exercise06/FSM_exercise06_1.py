@@ -187,6 +187,11 @@ resultJac = jacobi(A, solutionVec, n)
 x = np.linspace(-L, L, gridSize)
 plt.plot(x, resultJac, color = 'green', label = 'Jacobi iteration, N: ' + str(gridSize))
 
+n = 30000
+resultJac = jacobi(A, solutionVec, n)
+x = np.linspace(-L, L, gridSize)
+plt.plot(x, resultJac, color = 'orange', label = 'Jacobi iteration (' + str(n) + ', N: ' + str(gridSize))
+
 
 plt.xlabel('length [m]')
 plt.ylabel('temperature [K]')
