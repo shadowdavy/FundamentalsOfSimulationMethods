@@ -61,7 +61,7 @@ plt.subplot(223)
 plotsequence(uini, timesteps, 'downwind')
 plt.title('downwind')
 
-plt.savefig('FSM_exercise10_1_abc')
+plt.savefig('FSM_exercise10_1_abc.png')
 
 # change left boundary condition
 uini[0] = 0.5
@@ -78,7 +78,7 @@ plt.subplot(223)
 plotsequence(uini, timesteps, 'downwind')
 plt.title('downwind, left boundary 0.5')
 
-plt.savefig('FSM_exercise10_1_d')
+plt.savefig('FSM_exercise10_1_d.png')
 
 # change right boundary condition
 uini[0] = 1
@@ -96,7 +96,7 @@ plt.subplot(223)
 plotsequence(uini, timesteps, 'downwind')
 plt.title('downwind, right boundary 0.5')
 
-plt.savefig('FSM_exercise10_1_e')
+plt.savefig('FSM_exercise10_1_e.png')
 
 # 10 times smaller timesteps with 1000 iterations
 uini[0] = 0.5
@@ -114,7 +114,7 @@ plt.subplot(223)
 plotsequence(uini, timesteps, 'downwind')
 plt.title('downwind, smaller timestep')
 
-plt.savefig('FSM_exercise10_1_f')
+plt.savefig('FSM_exercise10_1_f.png')
 
 # 10 times larger timesteps with 10 iterations
 timesteps = 10
@@ -130,6 +130,6 @@ plt.subplot(223)
 plotsequence(uini, timesteps, 'downwind')
 plt.title('downwind, larger timestep')
 
-plt.savefig('FSM_exercise10_1_g')
+plt.savefig('FSM_exercise10_1_g.png')
 
 plt.show()
