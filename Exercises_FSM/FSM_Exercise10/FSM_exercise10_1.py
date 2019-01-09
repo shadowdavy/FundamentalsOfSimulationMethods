@@ -45,9 +45,9 @@ def plotsequence(uini, timesteps, method = 'upwind'):
             u = upwind(u, a, deltax, deltat)
         elif (method == 'downwind'):
             u = downwind(u, a, deltax, deltat)
-        if n%5 == 0:
+        if(n % 5) == 0:
             plt.plot(xini, u, label = "t=%g"%(n * deltat))
-    plt.legend(loc = "lower left")
+    # plt.legend(loc = "lower left")
 
 timesteps = 100
 fig = plt.figure()
@@ -102,7 +102,7 @@ plt.savefig('FSM_exercise10_1_e.png')
 uini[0] = 0.5
 uini[-1] = 0.5
 timesteps = 1000
-deltax = 0.003
+deltat = 0.003
 fig = plt.figure()
 plt.subplot(221)
 plotsequence(uini, timesteps, 'scheme')
@@ -118,7 +118,7 @@ plt.savefig('FSM_exercise10_1_f.png')
 
 # 10 times larger timesteps with 10 iterations
 timesteps = 10
-deltax = 0.3
+deltat = 0.3
 fig = plt.figure()
 plt.subplot(221)
 plotsequence(uini, timesteps, 'scheme')
