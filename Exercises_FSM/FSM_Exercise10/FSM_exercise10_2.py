@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 
 def advection(q_old, vel, deltax, deltat):
     q_new = q_old.copy()
+    flux = np.zeros(len(vel))
     # q_new[1:-1] = q_old[1:-1] - vel[:] * (deltat / deltax) * (q_old[1:-1] - q_old[:-2])
+    """
     lengthq = len(q_new)
     for i in range(1, lengthq - 1):
         # upwind
@@ -12,6 +14,12 @@ def advection(q_old, vel, deltax, deltat):
         # downwind
         if (vel[i] < 0):
             q_new[i] = q_old[i] - (deltat / deltax) * (vel[i] * q_old[i + 1] - vel[i - 1] * q_old[i])
+    """
+    vpos = np.where(vel >= 0.)[0]
+    vneg = np.where(vel < 0.)[0]
+    flux[vpos] = q_old[vpos] * vel[vpos]
+    flux[vneg] = q_old[vneg + 1] * vel[vneg]
+    q_new[1:-1] = q_old[1:-1] - (deltat / deltax) * (flux[1:] - flux[:-1])
     q_new[0] = q_old[0]
     q_new[-1] = q_new[-1]
 
@@ -38,8 +46,7 @@ for n in range(timesteps):
 plt.savefig("FSM:exercise10_2_a.png")
 
 # b)
-v = -2 * (xini[1:-1] - (L / 2)) / L
-v = np.pad(v, (1, 1), 'constant', constant_values = (v[-2], v[1]))
+v = -2 * (xini[:-1] - (L / 2)) / L
 uini = np.zeros(Nx)
 uini[np.where((np.abs(xini - (L / 2))) <= (L / 4))] = 1
 
